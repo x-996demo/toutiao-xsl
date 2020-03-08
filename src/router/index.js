@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/home' // 用简写的方式代替原有的方式
 // import Home from '../views/Home.vue'
-
+import Login from '@/views/login' // 简写形式
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,6 +15,11 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/login',
+    component: Login,
+    name: 'login'
   }
   // {
   //   path: '/about',
