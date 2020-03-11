@@ -1,8 +1,10 @@
 <template>
 <!-- 先放置一个大容器 小容器都放在大容器里面 -->
   <el-container>
-    <el-aside>
-      <h1>左侧导航区域</h1>
+    <el-aside style="width:230px">
+      <!-- <h1>左侧导航区域</h1> -->
+      <!-- 左侧导航组件 -->
+<layout-aside></layout-aside>
     </el-aside>
     <!-- 右侧在嵌套一个el-container -->
     <el-container>
@@ -22,7 +24,12 @@
 </template>
 
 <script>
+// 将左侧组件引用并注册
+import layoutAside from '@/components/home/layout-aside'
 export default {
+  components: {
+    'layout-aside': layoutAside
+  }
 
 }
 </script>
