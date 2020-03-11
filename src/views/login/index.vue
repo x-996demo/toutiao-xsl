@@ -85,7 +85,27 @@ export default {
       // // 第二种方式 promise
       this.$refs.loginForm.validate().then(() => {
         // 如果成功通过 校验就会到达 then
-        // alert(123)
+        // console.log(123)
+        // 通过校验应该做什么事?--->调用接口验证手机号是否正确
+        this.$axios({
+          url: '/authorizations', // 接口地址
+
+          data: this.loginForm, // body请求体参数
+          method: 'post'
+        }).then(result => {
+          // 成功
+          // 把钥匙放进兜里 也就是把tiken存于本地缓存
+          window.localStorage.setItem('user-token', result.data.data.token)
+          // 跳转到主页
+          this.$router.push('/home')
+        }).catch(() => {
+          // 失败
+          // 提示消息
+          // 第一种用法
+          // this.$message({ message: '用户名或者密码错误', type: 'error' })
+          // 第二种用法
+          this.$message.error('用户名或者验证码错误')
+        })
       })
     }
   }
