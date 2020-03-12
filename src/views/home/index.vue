@@ -27,13 +27,8 @@
 
 <script>
 // 将左侧组件引用并注册
-import layoutAside from '@/components/home/layout-aside'
-import layoutHeader from '@/components/home/layout-header'
+
 export default {
-  components: {
-    'layout-aside': layoutAside,
-    'layout-header': layoutHeader
-  }
 
 }
 </script>
