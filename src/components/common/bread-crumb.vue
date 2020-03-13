@@ -6,7 +6,7 @@
       <el-breadcrumb>
           <!-- 内容是动态的 -->
           <!-- 定义一个具名插槽 -->
-          <slot class="title"></slot>
+          <slot name="title"></slot>
       </el-breadcrumb>
   </el-breadcrumb>
 </template>
