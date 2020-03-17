@@ -59,13 +59,13 @@ export default {
     }
   },
   created () {
-    const token = localStorage.getItem('user-token') // 从兜里拿token 也就是从缓存中取token
+    // const token = localStorage.getItem('user-token') // 从兜里拿token 也就是从缓存中取token
     // 获取用户个人信息
     this.$axios({
-      url: '/user/profile', // 请求地址
-      headers: {
-        Authorization: `Bearer ${token}` // 格式要求 Bearer+token
-      } // 请求头参数 headers放置请求头参数
+      url: '/user/profile' // 请求地址
+      // headers: {
+      //   Authorization: `Bearer ${token}` // 格式要求 Bearer+token
+      // } // 请求头参数 headers放置请求头参数
     }).then(result => {
       // 若果加载成功了 我们要将数据赋值给 userinfo
       this.userInfo = result.data.data
