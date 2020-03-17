@@ -68,7 +68,7 @@ export default {
       // } // 请求头参数 headers放置请求头参数
     }).then(result => {
       // 若果加载成功了 我们要将数据赋值给 userinfo
-      this.userInfo = result.data.data
+      this.userInfo = result.data
     })
   }
 }
